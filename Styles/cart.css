@@ -189,32 +189,31 @@ header{
 }
 
 
-.cartTab {
-    background-color: #212529;
-    color: white;
-    display: grid;
-    grid-template-rows: 70px 1fr 70px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 400px; /* Adjust as needed */
-    width: 90%; /* Adjust as needed */
+/* Additional Global Styles */
+body {
+    padding-top: 100px;
+    background-color: #d6c7e8;
 }
 
+/* Header */
+
+/* Cart Modal */
 .cartTab {
     background-color: #212529;
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 400px; /* Adjust as needed */
-    width: 90%; /* Adjust as needed */
+    max-width: 400px;
+    width: 90%;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
 }
 
 .cartTab h1 {
@@ -223,23 +222,64 @@ header{
     font-weight: 300;
 }
 
+.cartTab .listCart {
+    width: 100%;
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.cartTab .listCart img {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
 .cartTab .btn {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
 }
 
 .cartTab .btn button {
     background-color: #e8bc0e;
+    color: #333;
     border: none;
+    padding: 10px 0;
     font-weight: 500;
     cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.cartTab .btn button:hover {
+    background-color: #d9a60c;
 }
 
 .cartTab .btn .close {
     background-color: #eee;
+    color: #333;
 }
 
-.cartTab .listCart img {
-    width: 100%;
+.cartTab .btn .close:hover {
+    background-color: #ddd;
 }
 
+/* Responsive Cart Styles */
+@media screen and (max-width: 768px) {
+    .cartTab {
+        max-width: 95%;
+        padding: 15px;
+    }
+
+    .cartTab h1 {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
+    .cartTab .btn button {
+        padding: 8px 0;
+    }
+}
