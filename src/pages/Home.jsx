@@ -11,16 +11,13 @@ import "aos/dist/aos.css";
 export default function Home() {
     useEffect(() => {
     AOS.init({
-        duration: 1500, 
-        once: true,     
+        duration: 1000, 
+        once: false,     
     });
-
-    AOS.refresh();
     }, []);
 
     return (
         <>
-            <Navbar />
             <HeroSection />
             <TrendingProducts />
             <Footer />

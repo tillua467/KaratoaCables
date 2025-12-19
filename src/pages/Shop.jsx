@@ -8,17 +8,8 @@ import "aos/dist/aos.css";
 
 
 export default function Shop() {
-    useEffect(() => {
-        AOS.init({
-            duration: 1500, 
-            once: true,     
-        });
-    
-        AOS.refresh();
-        }, []);
     return (
         <>
-            <Navbar />
             <div className="page-wrapper">
                 <ProductList />
             </div>
